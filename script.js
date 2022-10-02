@@ -168,7 +168,8 @@ const catsData = [
     alt: "A cat looking sad",
   }, //trailing comma
 ];
-
+//! DOM ZONE
+const emotionRadios = document.getElementById("emotion-radios");
 function getEmotionsArray(cats) {
   //TODO: Challenge
   /*
@@ -223,6 +224,21 @@ function renderEmotionsRadios(cats) {
     4. Call renderEmotionsRadios passing in catsData.
     */
   const emotions = getEmotionsArray(cats);
-  console.log(emotions);
+  let radioItems = ``;
+  for (let emotion of emotions) {
+    radioItems += `<p>${emotion}</p>`;
+  }
+  emotionRadios.innerHTML = radioItems;
+  //TODO: Challenge
+  /*
+1. Take control of the 'emotion-radios' div.
+2. In renderEmotionsRadios, set up a let 
+   to hold our string of HTML. You can initialise
+   it with an empty string.
+3. Iterate over "emotions" and put each emotion 
+   in a <p> tag and then add them to the let you 
+   created in step 2. 
+4. Render the string to the 'emotion-radios' div.
+*/
 }
 renderEmotionsRadios(catsData);

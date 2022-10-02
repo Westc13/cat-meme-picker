@@ -176,9 +176,29 @@ function getEmotionsArray(cats) {
    over the data.
 2. For now, just log out each cat object individually.
 */
+  const emotionArray = [];
   for (let cat of cats) {
-    console.log(cat);
+    //TODO: Challenge
+    /*
+  1. Add a nested "for of" to log out just 
+     the emotions from the emotionTags array 
+     in each object.
+  */
+    for (let emotion of cat.emotionTags) {
+      emotionArray.push(emotion);
+    }
   }
+  return emotionArray;
+  //TODO: Challenge
+  /*
+1. Set up a const and initialise it with 
+   an empty array.
+2. Instead of logging out each emotion, 
+   push each one to the new array.
+3. At the end of the function, log out the 
+   const holding the new array.
+*/
+
   //! nested for loops are difficult to understand try to use for of instead
   /*   const emotionsArray = [];
      for (let i = 0; i < cats.length; i++) {

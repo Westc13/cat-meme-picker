@@ -187,9 +187,22 @@ const emotionRadios = document.getElementById("emotion-radios");
    'click'. Google what event to listen for - I've already 
    given you a clue!
 */
-emotionRadios.addEventListener("change", function (e) {
-  console.log(e.target.id);
-});
+emotionRadios.addEventListener("change", highlightCheckedOption);
+function highlightCheckedOption(e) {
+  //TODO: Challenge
+  /*
+1. highlightCheckedOption should take control 
+   of the selected radio input and add the CSS
+   class of "highlight" to its classlist.
+*/
+  //TODO: Challenge
+  /*
+1. Change the code in line 8 so we add the 
+   'highlight' class to the parent of the 
+   selected input radio.
+*/
+  document.getElementById(e.target.id).parentElement.classList.add("highlight");
+}
 function getEmotionsArray(cats) {
   //TODO: Challenge
   /*

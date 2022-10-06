@@ -177,6 +177,23 @@ const catsData = [
 ];
 //! DOM ZONE
 const emotionRadios = document.getElementById("emotion-radios");
+const getImageBtn = document.getElementById("get-image-btn");
+//TODO: Challenge
+/*
+1. Set up an eventlistener which calls a new
+   function called "getMatchingCatsArray" when
+   the "Get Image" button is clicked.
+2. getMatchingCatsArray should save the value
+   of the checked radio input to a const and 
+   log out that const.
+*/
+getImgButton.addEventListener("click", getMatchingCatsArray);
+function getMatchingCatsArray() {
+  const selectedEmotion = document.querySelector(
+    `input[type="radio"]:checked`
+  ).value;
+  console.log(selectedEmotion);
+}
 //TODO:Challenge
 /*
 1. Add an eventListener to emotionRadios that will listen 
